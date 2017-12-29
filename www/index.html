@@ -9,9 +9,10 @@
   section[name="main"]{
     width: 100%;
     height: 100vh;
-    background-image:url('./images/background.png');
+    background-image:url('./images/background_v2.png');
     background-size:cover;
     display: inline-block;
+    position: relative;
   }
 
   section[name="main"] > .box{
@@ -92,6 +93,16 @@
   section[name="main"] > .box > .inputbox > input + .button:hover{
     background-color:#444484;
   }
+  section[name="main"] > .disclaimer{
+    position: absolute;
+    color: #939598;
+    font-family: "Poppins";
+    font-size: 10px;
+    bottom: 3px;
+    width: 100%;
+    left: 0px;
+    text-align: center;
+  }
   </style>
 </head>
 <body>
@@ -99,16 +110,19 @@
     <div class="box">
       <img src="./images/ogo.png">
       <h1>Snacks for <span id="typewriter">on the go</span></h1>
-      <h2>Bite is a snack subscription service for a busy but healthy lifestyle</h2>
+      <h2>Bite is a subscription service making healthy snacking easy, tasty, and fun.</h2>
       <form class="inputbox" action="https://formspree.io/sara@wantbite.com" method="POST">
         <input placeholder="Sign up for our waitlist" type="email" name="_email">
         <input class="button" value="Enter" type="submit">
       </form>
     </div>
+    <div class="disclaimer">
+      All Rights Reserved. Bite 2018.
+    </div>
   </section>
   <script>
   var options = {
-    strings: ["on the go", "coffee breaks", "picnics in the park", "waiting for the bus", "the commute", "study breaks"],
+    strings: ["on the go", "coffee breaks", "running to class", "long subway rides", "picnics in the park", "sharing with friends", "after your workout", "movie nights", "nights at the office", "the commuter rush", "study breaks"],
     typeSpeed: 90
   }
 
