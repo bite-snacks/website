@@ -3,6 +3,7 @@
 <head>
   <link rel="stylesheet" href="https://use.typekit.net/dmc7wcv.css">
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <script src="typed.js"></script>
   <style>
   body { margin: 0px; padding: 0px; }
   section[name="main"]{
@@ -35,7 +36,7 @@
     font-family: minion-pro-caption, serif;
     font-style: normal;
     color:#222262;
-    font-size:9.5vh;
+    font-size:7vh;
     margin-top:0px;
     font-weight: 600;
     margin-bottom:0px;
@@ -46,7 +47,6 @@
     font-size:16px;
     font-family:"Poppins";
     margin-top:5px;
-    margin-bottom:0px;
   }
 
   section[name="main"] > .box > .inputbox{
@@ -54,7 +54,7 @@
     width:70%;
     margin-left:15%;
     margin-right:15%;
-    margin-top:2.5vh;
+    margin-top:4.5vh;
   }
 
   section[name="main"] > .box > .inputbox > input{
@@ -80,7 +80,7 @@
     float:left;
     background-color:#222262;
     border-radius: 4px;
-    padding:.5vh 10px;
+    padding:.7vh 10px;
     font-size:3vh;
     font-family: minion-pro-caption, serif;
     cursor: pointer;
@@ -98,7 +98,7 @@
   <section name="main">
     <div class="box">
       <img src="./images/ogo.png">
-      <h1>Snacks for on-the-go</h1>
+      <h1>Snacks for <span id="typewriter">on the go</span></h1>
       <h2>Bite is a snack subscription service for a busy but healthy lifestyle</h2>
       <div class="inputbox">
         <input placeholder="Add your email for updates">
@@ -106,5 +106,45 @@
       </div>
     </div>
   </section>
+  <script>
+  var options = {
+    strings: ["on the go", "coffee breaks", "picnics in the park", "waiting for the bus", "the commute", "study breaks"],
+    typeSpeed: 90
+  }
+
+  var Dvorak = function(el, options){
+    element = document.getElementById(el);
+    sequence = [];
+    for(var i = 0; i < options.strings.length; i++){
+      string = options.strings[i];
+      if(i > 0){
+        for(var j = 0; j < string.length; j++){
+          sequence.push(string.substring(0, j));
+        }
+      }
+      for(var k = 0; k < 20; k++){
+        sequence.push(string.substring(0, j));
+      }
+      for(var j; j >= 0; j--){
+        sequence.push(string.substring(0, j));
+      }
+    }
+    n = 0;
+    recursiveDvorak = function(){ setTimeout(function(){
+      console.log(n);
+      if(n < sequence.length){
+        element.innerHTML = sequence[n];
+        n++;
+      } else { n = 0; }
+      recursiveDvorak();
+    }, options.typeSpeed);
+    }
+
+    recursiveDvorak();
+
+  }
+
+  var typed = new Dvorak("typewriter", options);
+  </script>
 </body>
 </html>
