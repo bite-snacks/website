@@ -1,34 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title></title>
-        <style>
+<head>
+  <link rel="stylesheet" href="https://use.typekit.net/dmc7wcv.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <style>
+  body { margin: 0px; padding: 0px; }
+  section[name="main"]{
+    width: 100%;
+    height: 100vh;
+    background-image:url('./images/background.png');
+    background-size:cover;
+    display: inline-block;
+  }
 
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-        }
+  section[name="main"] > .box{
+    width: 50%;
+    margin-left:25%;
+    margin-right:25%;
+    margin-top:25vh;
+    margin-bottom:25vh;
+    height: 50vh;
+    border-radius:10px;
+    display: inline-block;
+    background-color:white;
+    text-align:center;
+  }
 
-        body {
-            display: table;
-	    color: white;
-            font-size: 40px;
-	    font-family: Garamond;
-	    background-color: #1B40B2;
-        }
+  section[name="main"] > .box > img{
+    height: 15vh;
+    margin-top:3vh;
+  }
 
-        .my-block {
-            text-align: center;
-            display: table-cell;
-            vertical-align: middle;
-        }
-        </style>
-    </head>
-    <body>
-    <div class="my-block">
-       Take a bite.
+  section[name="main"] > .box >  h1 {
+    font-family: minion-pro-caption, serif;
+    font-style: normal;
+    color:#222262;
+    font-size:9.5vh;
+    margin-top:0px;
+    font-weight: 600;
+    margin-bottom:0px;
+  }
+
+  section[name="main"] > .box >  h2 {
+    color:#939598;
+    font-size:16px;
+    font-family:"Poppins";
+    margin-top:5px;
+    margin-bottom:0px;
+  }
+
+  section[name="main"] > .box > .inputbox{
+    height:6vh;
+    width:70%;
+    margin-left:15%;
+    margin-right:15%;
+    margin-top:2.5vh;
+  }
+
+  section[name="main"] > .box > .inputbox > input{
+    height: 6vh;
+    width: 70%;
+    float:left;
+    border:none;
+    outline:none;
+    font-family: minion-pro-caption, serif;
+    font-weight:600;
+    background-color:#F1F2F2;
+    box-sizing:border-box;
+    margin:0px;
+    padding:1.5vh 10px;
+    font-size:3vh;
+    border-radius: 4px;
+  }
+
+  section[name="main"] > .box > .inputbox > input + .button{
+    width:31%;
+    margin-left:-1%;
+    height:6vh;
+    float:left;
+    background-color:#222262;
+    border-radius: 4px;
+    padding:.5vh 10px;
+    font-size:3vh;
+    font-family: minion-pro-caption, serif;
+    cursor: pointer;
+    font-weight:600;
+    color:#F1F2F3;
+    box-sizing:border-box;
+  }
+
+  section[name="main"] > .box > .inputbox > input + .button:hover{
+    background-color:#444484;
+  }
+  </style>
+</head>
+<body>
+  <section name="main">
+    <div class="box">
+      <img src="./images/ogo.png">
+      <h1>Snacks for on-the-go</h1>
+      <h2>Bite is a snack subscription service for a busy but healthy lifestyle</h2>
+      <div class="inputbox">
+        <input placeholder="Add your email for updates">
+        <div class="button">Enter</div>
+      </div>
     </div>
-    </body>
+  </section>
+</body>
 </html>
