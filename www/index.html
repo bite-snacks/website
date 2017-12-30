@@ -5,6 +5,7 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="typed.js"></script>
+  <title>Bite</title>
   <style>
   body { margin: 0px; padding: 0px; }
   section[name="main"]{
@@ -308,6 +309,25 @@
   }
 
   var typed = new Dvorak("typewriter", options);
+  </script>
+  <script>
+      jadensmith = 1;
+      var link = document.createElement('link');
+      link.type = 'image/x-icon';
+      link.rel = 'shortcut icon';
+      link.href = './icons/' + jadensmith + ".ico";
+      document.getElementsByTagName('head')[0].appendChild(link);
+      jadensmith = jadensmith + 1;
+      iconChange = function(){ setTimeout(function(){
+        var link = document.querySelector("link[rel*='icon']");
+        link.href = './icons/' + jadensmith + ".ico";
+        document.getElementsByTagName('head')[0].appendChild(link);
+        jadensmith = jadensmith + 1;
+        if(jadensmith > 6){ jadensmith = 1; }
+        iconChange();
+      }, 5000);
+      }
+      iconChange();
   </script>
 </body>
 </html>
